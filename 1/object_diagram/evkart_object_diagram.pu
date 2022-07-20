@@ -1,14 +1,15 @@
 @startuml
 object アクセル
-
 object ホールセンサ
-
 object FET_High側
 object FET_Low側
-
 object 通電パターン
-
 object モータ制御周期通知タイマ
 
+アクセル --> FET_High側 : アクセル開度に応じてFET ON時間を設定
+ホールセンサ --> 通電パターン : モータ位置
+通電パターン --> FET_High側 : 通電ON/OFF
+通電パターン --> FET_Low側 : 通電ON/OFF
+モータ制御周期通知タイマ--> アクセル : 2ms周期でアクセル開度取得
 
 @enduml
