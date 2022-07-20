@@ -1,0 +1,14 @@
+@startuml
+object アクセル
+
+object ホールセンサ
+
+object FET_High側
+object FET_Low側
+
+object 通電パターン
+
+object モータ制御周期通知タイマ
+
+
+@enduml
